@@ -312,9 +312,9 @@ composer global require squizlabs/php_codesniffer
 
 ```js
     "php-cs-fixer.executablePath": "/Users/SEU_USUARIO_AQUI/.composer/vendor/bin/php-cs-fixer",
-    "php-cs-fixer.executablePathWindows": "",   //eg: php-cs-fixer.bat
+    //"php-cs-fixer.executablePathWindows": "",   //eg: php-cs-fixer.bat
     "php-cs-fixer.onsave": true,
-    "php-cs-fixer.rules": "@PSR12",
+    "php-cs-fixer.rules": "@PSR2",
     "php-cs-fixer.config": ".php_cs;.php_cs.dist",
     "php-cs-fixer.allowRisky": false,
     "php-cs-fixer.pathMode": "override",
@@ -328,10 +328,14 @@ composer global require squizlabs/php_codesniffer
     },
 
     "phpcs.executablePath": "/Users/SEU_USUARIO_AQUI/.composer/vendor/bin/phpcs",
-    "phpcs.showSources": true,
-    "phpcs.standard": "PSR12",
-    "simple-php-cs-fixer.save": true,
-    "simple-php-cs-fixer.rules": "@PSR1,@PSR2,trailing_comma_in_multiline_array",
+    // "phpcs.showSources": true,
+    "phpcs.standard": "PSR2",
+
+    "phpcs.ignorePatterns": [
+        "*/vendor/*"
+    ],
+
+    "intelephense.diagnostics.undefinedTypes": false,
 ```
 
 - ***Detalhe***: Substitua ```SEU_USUARIO_AQUI``` pelo seu nome de usuário, ou para saber qual a pasta do composer digite no terminal:
@@ -348,5 +352,10 @@ composer config --list --global
 
 
 - Agora tudo deverá estar funcionando.
+
+- <strong>Detalhe</strong> Muito importante, os opcionais de breakpoints deverão estar desmarcado
+conforme imagem:
+
+<img src="./breakpoints.png">
 
 

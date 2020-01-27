@@ -335,6 +335,8 @@ composer global require squizlabs/php_codesniffer
         "*/vendor/*"
     ],
 
+    "files.eol": "\n",
+
     "intelephense.diagnostics.undefinedTypes": false,
 ```
 

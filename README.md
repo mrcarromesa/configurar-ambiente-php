@@ -9,6 +9,8 @@
 - [Php Debug](https://marketplace.visualstudio.com/items?itemName=felixfbecker.php-debug)
 - [How do I change the PHP version my shell uses?](https://help.dreamhost.com/hc/en-us/articles/214202148-How-do-I-change-the-PHP-version-my-shell-uses-)
 
+- [VS Code Fix for “End of line character is invalid” PHPCS Error](https://webstoked.com/vs-code-fix-end-of-line-character-is-invalid/)
+
 ---
 
 <h2>Start<h2>
@@ -135,16 +137,17 @@ Group staff
 
 - Salvar o arquivo;
 
-- Executar o comando para restart o apache:
-
-```bash
-    sudo apachectl -k restart
-```
 
 - Por fim criar a pasta ```http``` dentro de ```/Library/WebServer/Documents/```
 
 ```bash 
     sudo mkdir /Library/WebServer/Documents/http
+```
+
+- Executar o comando para restart o apache:
+
+```bash
+    sudo apachectl -k restart
 ```
 
 ---
@@ -354,6 +357,10 @@ composer config --list --global
 
 
 - Agora tudo deverá estar funcionando.
+
+- Erro que pode ocorrer em arquivos já existentes: ```‘End of line character is invalid; expected “\n” but found “\r\n”‘ Error in VS Code``` 
+
+- Para resolver: Na parte inferior na direita, clique em "CRLF" e troque para "LF"
 
 - <strong>Detalhe</strong> Muito importante, os opcionais de breakpoints deverão estar desmarcado
 conforme imagem:
